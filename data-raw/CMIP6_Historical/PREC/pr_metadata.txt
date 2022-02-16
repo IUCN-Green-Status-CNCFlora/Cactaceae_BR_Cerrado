@@ -1,0 +1,4 @@
+Open request form
+Request ID: 26f8f937-09ca-4dc3-909a-586b01600f8e
+
+Temporal resolution:MonthlyExperiment:HistoricalLevel:Single levelsVariable:PrecipitationModel:MPI-ESM1-2-LR (Germany)Temporal range:1850-01-01 to 1850-12-31Sub-region extraction:North -11.49°, West -48.52°, South -37.67°, East -24.49°Format:Zip file (.zip)

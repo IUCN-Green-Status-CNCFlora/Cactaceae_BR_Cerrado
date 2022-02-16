@@ -1,0 +1,4 @@
+Open request form
+Request ID: d539d0b8-58e9-472a-84dc-e34b477ad304
+
+Temporal resolution:MonthlyExperiment:HistoricalLevel:Single levelsVariable:Daily maximum near-surface air temperatureModel:MPI-ESM1-2-LR (Germany)Temporal range:1850-01-01 to 1850-12-31Sub-region extraction:North -11.49°, West -48.52°, South -37.67°, East -24.49°Format:Zip file (.zip)
