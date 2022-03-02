@@ -14,7 +14,5 @@ all_csv <- list.files("data/in_occurrences",pattern = ".csv", full.names = T) |>
   
   
   
-  data <- purrr::map(data, ~ . %>% dplyr::select(-c(7, 11, 13, 14))) 
-
 
 

@@ -31,101 +31,132 @@ layers_list <- purrr::map(1:19, ~raster(bios, layer = .))
 
 ## 
 
-raster_base <- raster::raster("data-raw/crop_CHELSA_bio1_1981-2010_V.2.1.tif")
+raster_base <- raster::raster("data-raw/altitude_inpe_br.asc")
 plot(raster_base)
 
 ##
 
-bio1 <- spatialEco::raster.downscale(raster_base, layers_list[[1]], scatter = T)
-plot(bio1$downscale)
-writeRaster(bio1$downscale, "data/variables/historical_1850/bio1.tif")
+bio_1 <- spatialEco::raster.downscale(raster_base, layers_list[[1]], scatter = F)
+plot(bio_1$downscale)
+bio1 <- bio_1$downscale / 10
+plot(bio1)
+writeRaster(bio1, "data/variables/historical_1850/bio1.tif", overwrite = T)
 
 
-bio2 <- spatialEco::raster.downscale(raster_base, layers_list[[2]], scatter = T)
+bio2 <- spatialEco::raster.downscale(raster_base, layers_list[[2]], scatter = F)
 plot(bio2$downscale)
 writeRaster(bio2$downscale, "data/variables/historical_1850/bio2.tif")
 
+bio_3 <- spatialEco::raster.downscale(raster_base, layers_list[[3]], scatter = F)
+plot(bio_3$downscale)
+bio3 <- bio_3$downscale /10
+plot(bio3)
+writeRaster(bio3, "data/variables/historical_1850/bio3.tif")
 
-bio3 <- spatialEco::raster.downscale(raster_base, layers_list[[3]], scatter = T)
-plot(bio3$downscale)
-writeRaster(bio3$downscale, "data/variables/historical_1850/bio3.tif")
 
-
-bio4 <- spatialEco::raster.downscale(raster_base, layers_list[[4]], scatter = T)
+bio4 <- spatialEco::raster.downscale(raster_base, layers_list[[4]], scatter = F)
 plot(bio4$downscale)
 writeRaster(bio4$downscale, "data/variables/historical_1850/bio4.tif")
 
 
-bio5 <- spatialEco::raster.downscale(raster_base, layers_list[[5]], scatter = T)
-plot(bio5$downscale)
-writeRaster(bio5$downscale, "data/variables/historical_1850/bio5.tif")
+bio_5 <- spatialEco::raster.downscale(raster_base, layers_list[[5]], scatter = F)
+plot(bio_5$downscale)
+bio5 <- bio_5$downscale /10
+plot(bio5)
+writeRaster(bio5, "data/variables/historical_1850/bio5.tif")
 
 
-bio6 <- spatialEco::raster.downscale(raster_base, layers_list[[6]], scatter = T)
-plot(bio6$downscale)
-writeRaster(bio6$downscale, "data/variables/historical_1850/bio6.tif")
+bio_6 <- spatialEco::raster.downscale(raster_base, layers_list[[6]], scatter = F)
+plot(bio_6$downscale)
+bio6 <- bio_6$downscale /10
+plot(bio6)
+writeRaster(bio6, "data/variables/historical_1850/bio6.tif")
 
 
-bio7 <- spatialEco::raster.downscale(raster_base, layers_list[[7]], scatter = T)
+bio7 <- spatialEco::raster.downscale(raster_base, layers_list[[7]], scatter = F)
 plot(bio7$downscale)
 writeRaster(bio7$downscale, "data/variables/historical_1850/bio7.tif")
 
 
-bio8 <- spatialEco::raster.downscale(raster_base, layers_list[[8]], scatter = T)
-plot(bio8$downscale)
-writeRaster(bio8$downscale, "data/variables/historical_1850/bio8.tif")
+bio_8 <- spatialEco::raster.downscale(raster_base, layers_list[[8]], scatter = F)
+plot(bio_8$downscale)
+bio8 <- bio_8$downscale /10
+plot(bio8)
+writeRaster(bio8, "data/variables/historical_1850/bio8.tif")
 
 
-bio9 <- spatialEco::raster.downscale(raster_base, layers_list[[9]], scatter = T)
-plot(bio9$downscale)
-writeRaster(bio9$downscale, "data/variables/historical_1850/bio9.tif")
+bio_9 <- spatialEco::raster.downscale(raster_base, layers_list[[9]], scatter = F)
+plot(bio_9$downscale)
+bio9 <- bio_9$downscale /10
+plot(bio9)
+writeRaster(bio9, "data/variables/historical_1850/bio9.tif")
 
 
-bio10 <- spatialEco::raster.downscale(raster_base, layers_list[[10]], scatter = T)
-plot(bio10$downscale)
-writeRaster(bio10$downscale, "data/variables/historical_1850/bio10.tif")
+bio_10 <- spatialEco::raster.downscale(raster_base, layers_list[[10]], scatter = F)
+plot(bio_10$downscale)
+bio10 <- bio_10$downscale /10
+plot(bio10)
+writeRaster(bio10, "data/variables/historical_1850/bio10.tif")
 
 
-bio11 <- spatialEco::raster.downscale(raster_base, layers_list[[11]], scatter = T)
-plot(bio11$downscale)
-writeRaster(bio11$downscale, "data/variables/historical_1850/bio11.tif")
+bio_11 <- spatialEco::raster.downscale(raster_base, layers_list[[11]], scatter = F)
+plot(bio_11$downscale)
+bio11 <- bio_11$downscale /10
+plot(bio11)
+writeRaster(bio11, "data/variables/historical_1850/bio11.tif")
+
+bio_12 <- spatialEco::raster.downscale(raster_base, layers_list[[12]], scatter = F)
+plot(bio_12$downscale)
+bio12 <- bio_12$downscale *1000000
+plot(bio12)
+writeRaster(bio12, "data/variables/historical_1850/bio12.tif")
 
 
-bio12 <- spatialEco::raster.downscale(raster_base, layers_list[[12]], scatter = T)
-plot(bio12$downscale)
-writeRaster(bio12$downscale, "data/variables/historical_1850/bio12.tif")
+bio_13 <- spatialEco::raster.downscale(raster_base, layers_list[[13]], scatter = F)
+plot(bio_13$downscale)
+bio13 <- bio_13$downscale  *1000000
+plot(bio13)
+writeRaster(bio13, "data/variables/historical_1850/bio13.tif")
 
 
-bio13 <- spatialEco::raster.downscale(raster_base, layers_list[[13]], scatter = T)
-plot(bio13$downscale)
-writeRaster(bio13$downscale, "data/variables/historical_1850/bio13.tif")
+bio_14 <- spatialEco::raster.downscale(raster_base, layers_list[[14]], scatter = F)
+plot(bio_14$downscale)
+bio14 <- bio_14$downscale  *10000000
+plot(bio14)
+writeRaster(bio14, "data/variables/historical_1850/bio14.tif")
+
+bio_15<- spatialEco::raster.downscale(raster_base, layers_list[[15]], scatter = F)
+plot(bio_15$downscale)
+bio15 <- bio_15$downscale *10000
+plot(bio15)
+writeRaster(bio15, "data/variables/historical_1850/bio15.tif")
+
+bio_16 <- spatialEco::raster.downscale(raster_base, layers_list[[16]], scatter = F)
+plot(bio_16$downscale)
+bio16 <- bio_16$downscale *1000000
+plot(bio16)
+writeRaster(bio16, "data/variables/historical_1850/bio16.tif")
 
 
-bio14 <- spatialEco::raster.downscale(raster_base, layers_list[[14]], scatter = T)
-plot(bio14$downscale)
-writeRaster(bio14$downscale, "data/variables/historical_1850/bio14.tif")
-
-bio15<- spatialEco::raster.downscale(raster_base, layers_list[[15]], scatter = T)
-plot(bio15$downscale)
-writeRaster(bio15$downscale, "data/variables/historical_1850/bio15.tif")
-
-bio16 <- spatialEco::raster.downscale(raster_base, layers_list[[16]], scatter = T)
-plot(bio16$downscale)
-writeRaster(bio16$downscale, "data/variables/historical_1850/bio16.tif")
+bio_17<- spatialEco::raster.downscale(raster_base, layers_list[[17]], scatter = F)
+plot(bio_17$downscale)
+bio17 <- bio_17$downscale  *10000000
+plot(bio17)
+writeRaster(bio17, "data/variables/historical_1850/bio17.tif")
 
 
-bio17<- spatialEco::raster.downscale(raster_base, layers_list[[17]], scatter = T)
-plot(bio17$downscale)
-writeRaster(bio17$downscale, "data/variables/historical_1850/bio17.tif")
 
+bio_18 <- spatialEco::raster.downscale(raster_base, layers_list[[18]], scatter = F)
+plot(bio_18$downscale)
+bio18 <- bio_18$downscale *1000000
+plot(bio18)
+writeRaster(bio18, "data/variables/historical_1850/bio18.tif")
 
-bio18 <- spatialEco::raster.downscale(raster_base, layers_list[[18]], scatter = T)
-plot(bio18$downscale)
-writeRaster(bio18$downscale, "data/variables/historical_1850/bio18.tif")
-
-bio19 <- spatialEco::raster.downscale(raster_base, layers_list[[19]], scatter = T)
-plot(bio19$downscale)
-writeRaster(bio19$downscale, "data/variables/historical_1850/bio19.tif")
+bio_19 <- spatialEco::raster.downscale(raster_base, layers_list[[19]], scatter = F)
+plot(bio_19$downscale)
+bio19 <- bio_19$downscale *10000000
+plot(bio19)
+writeRaster(bio19, "data/variables/historical_1850/bio19.tif")
 
 ############################################################################################################################################################################################################################################################################################################################################################################################################################################################
 ##### Not run
